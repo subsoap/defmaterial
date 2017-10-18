@@ -36,6 +36,7 @@ function update_auto_camera(self)
     local view_matrix = vmath.matrix4_look_at(cam_pos, cam_lookat, cam_up)
     local fov = (math.pi / 180.0) * 60.0 -- 60 degrees
     local proj_matrix = vmath.matrix4_perspective(fov, camera.window_width / camera.window_height, 0.1, 1000.0)
+    camera.position = cam_pos
 	camera.view_matrix = view_matrix
 	camera.proj_matrix = proj_matrix
 end
@@ -69,6 +70,7 @@ function update_control_camera(self)
     local view_matrix = vmath.matrix4_look_at(cam_pos, cam_lookat, cam_up)
     local fov = (math.pi / 180.0) * 60.0 -- 60 degrees
     local proj_matrix = vmath.matrix4_perspective(fov, camera.window_width / camera.window_height, 0.1, 1000.0)
+    camera.position = cam_pos
 	camera.view_matrix = view_matrix
 	camera.proj_matrix = proj_matrix	
 	

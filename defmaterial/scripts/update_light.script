@@ -12,8 +12,10 @@ function init(self)
 		"/material_tests/geometry#torus_cellshading",
 		"/material_tests/geometry#torus_cellshading_lit",
 		"/material_tests/char#char_lit_pixel",
-		"/material_tests/char#char_cellshading_pixel"
+		"/material_tests/char#char_cellshading_pixel",
 		
+		"/material_tests/torus_phong#torus_phong",
+		"/material_tests/torus_phong1#torus_phong"
 		
 	}
 	self.position = vmath.vector4(1,1,1,1)

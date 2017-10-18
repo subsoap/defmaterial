@@ -4,10 +4,14 @@ local light = require("defmaterial.light_helper")
 
 function init(self)
 	self.meshes = {
-		"/single_torus#torus_cellshading",
-		"/bevel_cube#bevel_cube_cellshading",
-		"/geometry#torus_lit",
-		"/char#char_lit_pixel"
+		"/material_tests/single_torus#torus_cellshading",
+		"/material_tests/bevel_cube#bevel_cube_cellshading",
+		"/material_tests/geometry#torus_lit",
+		"/material_tests/geometry#torus_cellshading",
+		"/material_tests/geometry#torus_cellshading_lit",
+		"/material_tests/char#char_lit_pixel",
+		"/material_tests/char#char_cellshading_pixel"
+		
 		
 	}
 	self.position = vmath.vector4(1,1,1,1)
@@ -32,7 +36,7 @@ function update(self, dt)
 	light.position.y = math.cos(self.timer * 0.2) * 10
 	light.position.x = math.sin(self.timer * 0.2) * 10
 	light.position.z = math.tan(self.timer * 0.5)
-	go.set_position(light.position, "/_light_debugger")
+	go.set_position(light.position, "/material_tests/_light_debugger")
 end
 
 function on_message(self, message_id, message, sender)

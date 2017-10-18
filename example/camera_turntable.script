@@ -14,7 +14,6 @@ input.mouse_button_left = hash("mouse_button_left")
 input.mouse_wheel_up = hash("mouse_wheel_up")
 input.mouse_wheel_down = hash("mouse_wheel_down")
 
-input.key_p = hash("key_p")
 
 
 function update_auto_camera(self)
@@ -135,11 +134,7 @@ end
 
 function on_input(self, action_id, action)
 	
-	if action_id == input.key_p and action.released then
-		msg.post("@system:", "toggle_profile")
-		print("Toggle Profiler")
-	end
-	
+
 
 	if action_id == input.mouse_wheel_down then
 		self.turntable_distance = self.turntable_distance + 0.25
@@ -157,7 +152,7 @@ function on_input(self, action_id, action)
 	
 	if action_id == input.key_space and action.released then
 		toggle_mode(self)
-		print("toggle")
+		print("Toggle Camera Mode")
 	end
 	
 	if action_id == input.key_a then

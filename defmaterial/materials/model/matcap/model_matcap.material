@@ -1,8 +1,8 @@
-name: "model_phong"
+name: "model_matcap"
 tags: "model"
 tags: "3d"
-vertex_program: "/defmaterial/materials/model/phong/model_phong.vp"
-fragment_program: "/defmaterial/materials/model/phong/model_phong.fp"
+vertex_program: "/defmaterial/materials/model/matcap/model_matcap.vp"
+fragment_program: "/defmaterial/materials/model/matcap/model_matcap.fp"
 vertex_constants {
   name: "mtx_view"
   type: CONSTANT_TYPE_VIEW
@@ -38,7 +38,7 @@ vertex_constants {
   type: CONSTANT_TYPE_USER
   value {
     x: 0.0
-    y: 0.0
+    y: 10.0
     z: 0.0
     w: 0.0
   }
@@ -54,8 +54,28 @@ vertex_constants {
   }
 }
 vertex_constants {
-  name: "model"
+  name: "peye"
   type: CONSTANT_TYPE_USER
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "n"
+  type: CONSTANT_TYPE_USER
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "normal_matrix"
+  type: CONSTANT_TYPE_NORMAL
   value {
     x: 0.0
     y: 0.0
@@ -65,8 +85,8 @@ vertex_constants {
 }
 samplers {
   name: "tex0"
-  wrap_u: WRAP_MODE_REPEAT
-  wrap_v: WRAP_MODE_REPEAT
-  filter_min: FILTER_MODE_MIN_LINEAR
-  filter_mag: FILTER_MODE_MAG_LINEAR
+  wrap_u: WRAP_MODE_CLAMP_TO_EDGE
+  wrap_v: WRAP_MODE_CLAMP_TO_EDGE
+  filter_min: FILTER_MODE_MIN_NEAREST
+  filter_mag: FILTER_MODE_MAG_NEAREST
 }

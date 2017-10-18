@@ -20,7 +20,7 @@ void main() {
     ToonBrightnessLevels[4] = 0.2;
     
     // Light
-    vec3 lightVectorW = normalize(light.xyz - var_position);
+    vec3 lightVectorW = normalize(light.xyz - var_position.xyz);
     
     // diffuse
     float ndl = max(0., dot(var_normal, lightVectorW));

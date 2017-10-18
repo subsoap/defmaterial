@@ -8,7 +8,7 @@ uniform mediump vec4 camera_position;
 void main() {
 
     vec3 color = vec3(1., 1., 1.);
-    vec3 viewDirectionW = normalize(camera_position - var_position);
+    vec3 viewDirectionW = normalize(camera_position.xyz - var_position.xyz);
 
     // Fresnel
 	float fresnelTerm = dot(viewDirectionW, var_normal);

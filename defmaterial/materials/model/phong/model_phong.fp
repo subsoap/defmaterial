@@ -10,10 +10,10 @@ uniform mediump vec4 camera_position;
 void main() {
 
     // World values
-    vec3 viewDirectionW = normalize(camera_position - var_position);
+    vec3 viewDirectionW = normalize(camera_position.xyz - var_position.xyz);
     
     // Light
-    vec3 lightVectorW = normalize(light - var_position);
+    vec3 lightVectorW = normalize(light.xyz - var_position.xyz);
     vec3 color = texture2D(tex0, var_texcoord0).rgb;
     
     // diffuse

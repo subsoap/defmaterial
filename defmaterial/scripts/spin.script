@@ -1,0 +1,33 @@
+go.property("rotation_axis_x",0)
+go.property("rotation_axis_y", -0.01)
+go.property("rotation_axis_z", 0)
+
+function init(self)
+	-- Add initialization code here
+	-- Remove this function if not needed
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	local rotation = go.get_rotation(object)
+	go.set_rotation(rotation * vmath.quat_rotation_y(self.rotation_axis_y) * vmath.quat_rotation_x(self.rotation_axis_x) * vmath.quat_rotation_z(self.rotation_axis_z))
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

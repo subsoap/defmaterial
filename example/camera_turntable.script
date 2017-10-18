@@ -1,0 +1,188 @@
+local camera = require("defmaterial.camera_helper")
+
+local input = {}
+input.key_w = hash("key_w")
+input.key_a = hash("key_a")
+input.key_s = hash("key_s")
+input.key_d = hash("key_d")
+input.key_q = hash("key_q")
+input.key_e = hash("key_e")
+
+input.key_space = hash("key_space")
+input.touch = hash("touch")
+input.mouse_button_left = hash("mouse_button_left")
+input.mouse_wheel_up = hash("mouse_wheel_up")
+input.mouse_wheel_down = hash("mouse_wheel_down")
+
+input.key_p = hash("key_p")
+
+
+function update_auto_camera(self)
+	self.rotate_max_speed = 10
+	if self.screen_dx > 0 then
+		self.screen_dx = math.min(self.screen_dx,self.rotate_max_speed)
+	else
+		self.screen_dx = math.max(self.screen_dx,self.rotate_max_speed * -1)
+	end
+
+	self.turntable_height = math.min(math.max(self.turntable_height - self.screen_dy * 0.02, -50), 50)
+
+	self.turn = self.turn - self.screen_dx * 0.01
+	
+	
+    local cam_lookat = vmath.vector3(0.0,0.0,0.0)
+    local cam_pos = vmath.vector3(math.sin(self.turn * 0.25) * self.turntable_distance ,self.turntable_height,math.cos(self.turn * 0.25)  * self.turntable_distance )
+    --local cam_pos = vmath.vector3(0.0,0.0,20.0) -- this moves the camera further away
+    local cam_up = vmath.vector3(0,1,0)
+    local view_matrix = vmath.matrix4_look_at(cam_pos, cam_lookat, cam_up)
+    local fov = (math.pi / 180.0) * 60.0 -- 60 degrees
+    local proj_matrix = vmath.matrix4_perspective(fov, camera.window_width / camera.window_height, 0.1, 1000.0)
+	camera.view_matrix = view_matrix
+	camera.proj_matrix = proj_matrix
+end
+
+function update_control_camera(self)
+	self.distance = 10
+	
+	
+	--self.angle = self.angle + 0.001
+	--if self.angle >= 360 then self.angle = 0 end
+	--if self.angle <= 0 then self.angle = 360 end
+	
+    local cam_pos = vmath.vector3(-10.0,5.0,1.0) + self.position
+    local cam_lookat = vmath.vector3(cam_pos.x + (math.cos(self.angle) * self.distance),cam_pos.y,cam_pos.z + (math.sin(self.angle) * self.distance))
+
+	if self.forward == true then
+		local temp_y = self.position.y
+		local unit_lookat = vmath.vector3((math.cos(self.angle) * self.distance),cam_pos.y,(math.sin(self.angle) * self.distance))
+		self.position = self.position + unit_lookat * 0.02
+		self.position.y = temp_y
+	end
+
+	if self.backward == true then
+		local temp_y = self.position.y
+		local unit_lookat = vmath.vector3((math.cos(self.angle) * self.distance),cam_pos.y,(math.sin(self.angle) * self.distance))
+		self.position = self.position + unit_lookat * 0.02 * -1
+		self.position.y = temp_y
+	end
+
+    local cam_up = vmath.vector3(0,1,0)
+    local view_matrix = vmath.matrix4_look_at(cam_pos, cam_lookat, cam_up)
+    local fov = (math.pi / 180.0) * 60.0 -- 60 degrees
+    local proj_matrix = vmath.matrix4_perspective(fov, camera.window_width / camera.window_height, 0.1, 1000.0)
+	camera.view_matrix = view_matrix
+	camera.proj_matrix = proj_matrix	
+	
+end
+
+function toggle_mode(self)
+	if self.auto == true then
+		self.auto = false
+	else
+		self.auto = true
+	end
+	
+end
+
+
+function init(self)
+	
+	msg.post(".", "acquire_input_focus")
+    self.timer = 0
+    self.auto = true
+    
+    self.angle = 0
+    
+    self.position = vmath.vector3(0.0,0.0,0.0)
+    
+    self.forward = false
+    self.backward = false
+    
+    self.turn = 0
+    self.screen_dx = 0
+    self.screen_dy = 0
+    self.turntable_distance = 10
+    self.turntable_height = 10
+    
+    self.touch_down = false
+    
+    
+    
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	self.timer = self.timer + 0.5 * dt
+	if self.auto == true then
+		update_auto_camera(self)
+	else
+		update_control_camera(self)
+	end
+	
+	self.forward = false
+	self.backward = false
+	
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	
+	if action_id == input.key_p and action.released then
+		msg.post("@system:", "toggle_profile")
+		print("Toggle Profiler")
+	end
+	
+
+	if action_id == input.mouse_wheel_down then
+		self.turntable_distance = self.turntable_distance + 0.25
+	end
+
+	if action_id == input.mouse_wheel_up then
+		self.turntable_distance = self.turntable_distance - 0.25
+	end
+	
+	if action_id == input.mouse_button_left then
+		self.screen_dx = action.dx
+		self.screen_dy = action.dy
+	end
+	
+	
+	if action_id == input.key_space and action.released then
+		toggle_mode(self)
+		print("toggle")
+	end
+	
+	if action_id == input.key_a then
+		self.angle = self.angle - 0.05
+	end
+	if action_id == input.key_d then
+		self.angle = self.angle + 0.05
+	end	
+	
+	if action_id == input.key_w then
+		self.forward = true
+	end
+	if action_id == input.key_s then
+		self.backward = true
+	end
+	
+	if action_id == input.key_q then
+		self.position.y = self.position.y - 0.1
+	end
+	if action_id == input.key_e then
+		self.position.y = self.position.y + 0.1
+	end	
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end

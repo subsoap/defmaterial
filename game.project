@@ -1,0 +1,24 @@
+[project]
+title = DefMaterial
+dependencies = 
+
+[library]
+include_dirs = defmaterial
+
+[input]
+game_binding = /example/main.input_bindingc
+
+[bootstrap]
+main_collection = /example/main.collectionc
+render = /defmaterial/render/default.renderc
+
+[physics]
+type = 3D
+debug = 1
+
+[script]
+shared_state = 1
+
+[display]
+variable_dt = 1
+

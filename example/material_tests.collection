@@ -1,5 +1,5 @@
 name: "default"
-scale_along_z: 0
+scale_along_z: 1
 embedded_instances {
   id: "geometry"
   data: "embedded_components {\n"
@@ -142,7 +142,7 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 2.0
+    x: 6.0
     y: 0.0
     z: -4.0
   }
@@ -292,9 +292,9 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.5
+    y: 0.5
+    z: 0.5
   }
 }
 embedded_instances {
@@ -334,7 +334,7 @@ embedded_instances {
   "  type: \"model\"\n"
   "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
   "material: \\\"/defmaterial/materials/model/cellshading/model_cellshading.material\\\"\\n"
-  "textures: \\\"/defmaterial/textures/martian_surface.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_red_white.jpg\\\"\\n"
   "skeleton: \\\"\\\"\\n"
   "animations: \\\"\\\"\\n"
   "default_animation: \\\"\\\"\\n"
@@ -560,7 +560,7 @@ embedded_instances {
   "  type: \"model\"\n"
   "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
   "material: \\\"/defmaterial/materials/model/unlit/model_unlit.material\\\"\\n"
-  "textures: \\\"/defmaterial/textures/martian_surface.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_red_white.jpg\\\"\\n"
   "skeleton: \\\"\\\"\\n"
   "animations: \\\"\\\"\\n"
   "default_animation: \\\"\\\"\\n"
@@ -594,5 +594,269 @@ embedded_instances {
     x: 1.0
     y: 1.0
     z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube2"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/lit/model_lit.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_red_white.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 3.0
+    y: 0.0
+    z: 12.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube3"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/discard/model_discard.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_red_white.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -1.0
+    y: 0.0
+    z: 9.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube31"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/spherical_enviroment_mapping/model_spherical_enviroment_mapping.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map_blurred.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -1.0
+    y: 0.0
+    z: 12.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube311"
+  data: "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/torus.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/spherical_enviroment_mapping/model_spherical_enviroment_mapping.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map_blurred.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -2.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
   }
 }

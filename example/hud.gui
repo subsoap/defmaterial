@@ -104,7 +104,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Spacebar Toggle"
+  text: "P Toggle Profiler"
   font: "system_font"
   id: "text1"
   xanchor: XANCHOR_NONE

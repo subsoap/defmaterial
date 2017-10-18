@@ -6,6 +6,8 @@ function init(self)
 	self.meshes = {
 		"/material_tests/single_torus#torus_cellshading",
 		"/material_tests/bevel_cube#bevel_cube_cellshading",
+		"/material_tests/bevel_cube2#bevel_cube_cellshading",
+		
 		"/material_tests/geometry#torus_lit",
 		"/material_tests/geometry#torus_cellshading",
 		"/material_tests/geometry#torus_cellshading_lit",

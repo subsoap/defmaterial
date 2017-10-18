@@ -6,7 +6,10 @@ function init(self)
 	self.meshes = {
 		"/material_tests/bevel_cube3111#bevel_cube_cellshading",
 		"/material_tests/torus_phong#torus_phong",
+		"/material_tests/char#char_phong_pixel",
 		"/material_tests/torus_phong1#torus_phong"
+		
+		
 		
 	}
 	self.position = vmath.vector4(1,1,1,1)

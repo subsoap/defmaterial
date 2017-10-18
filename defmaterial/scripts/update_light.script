@@ -11,8 +11,11 @@ function init(self)
 		"/material_tests/geometry#torus_lit",
 		"/material_tests/geometry#torus_cellshading",
 		"/material_tests/geometry#torus_cellshading_lit",
+		
 		"/material_tests/char#char_lit_pixel",
 		"/material_tests/char#char_cellshading_pixel",
+		"/material_tests/char#char_phong_pixel",
+		
 		
 		"/material_tests/torus_phong#torus_phong",
 		"/material_tests/torus_phong1#torus_phong"

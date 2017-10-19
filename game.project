@@ -9,7 +9,7 @@ include_dirs = defmaterial
 game_binding = /example/main.input_bindingc
 
 [bootstrap]
-main_collection = /example/main.collectionc
+main_collection = /example/material_normals/material_normals.collectionc
 render = /defmaterial/render/default.renderc
 
 [physics]

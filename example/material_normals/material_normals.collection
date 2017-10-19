@@ -1,0 +1,368 @@
+name: "default"
+scale_along_z: 1
+embedded_instances {
+  id: "_camera"
+  data: "components {\n"
+  "  id: \"camera\"\n"
+  "  component: \"/example/camera_turntable.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"update_light\"\n"
+  "  component: \"/example/material_normals/update_light.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"update_camera\"\n"
+  "  component: \"/example/material_normals/update_camera.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/cellshading/model_cellshading.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_red_white.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 3.0
+    y: 0.0
+    z: 2.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "_light_debugger"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
+  "default_animation: \\\"anim\\\"\\n"
+  "material: \\\"/defmaterial/materials/sprite/tint/sprite_tint.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite1\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
+  "default_animation: \\\"anim\\\"\\n"
+  "material: \\\"/defmaterial/materials/sprite/tint/sprite_tint.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: -0.70710677\n"
+  "    z: 0.0\n"
+  "    w: 0.70710677\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite11\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
+  "default_animation: \\\"anim\\\"\\n"
+  "material: \\\"/defmaterial/materials/sprite/tint/sprite_tint.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.5\n"
+  "    y: -0.5\n"
+  "    z: 0.5\n"
+  "    w: 0.5\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 1.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 0.05
+    y: 0.05
+    z: 0.05
+  }
+}
+embedded_instances {
+  id: "bevel_cube1"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/engram.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/phong_normal/model_phong_normal.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/matcap/icy.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/normals/Rock_01_local.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 5.0
+    y: 0.0
+    z: -2.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube11"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_x\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_y\"\n"
+  "    value: \"0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"0.0\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/engram.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/phong_normal/model_phong_normal.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/matcap/icy.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/normals/1324-normal.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 3.0
+    y: -1.0
+    z: 6.0
+  }
+  rotation {
+    x: -5.4232904E-14
+    y: -0.7341979
+    z: -1.8805641E-13
+    w: 0.67893547
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}

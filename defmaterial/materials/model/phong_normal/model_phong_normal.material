@@ -1,8 +1,8 @@
 name: "model_phong"
 tags: "model"
 tags: "3d"
-vertex_program: "/defmaterial/materials/model/phong/model_phong.vp"
-fragment_program: "/defmaterial/materials/model/phong/model_phong.fp"
+vertex_program: "/defmaterial/materials/model/phong_normal/model_phong_normal.vp"
+fragment_program: "/defmaterial/materials/model/phong_normal/model_phong_normal.fp"
 vertex_constants {
   name: "mtx_view"
   type: CONSTANT_TYPE_VIEW

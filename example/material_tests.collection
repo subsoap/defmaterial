@@ -175,36 +175,6 @@ embedded_instances {
   "    w: 1.0\n"
   "  }\n"
   "}\n"
-  "components {\n"
-  "  id: \"update_light\"\n"
-  "  component: \"/defmaterial/scripts/update_light.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "components {\n"
-  "  id: \"update_camera\"\n"
-  "  component: \"/defmaterial/scripts/update_camera.script\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
   ""
   position {
     x: 0.0
@@ -1060,7 +1030,7 @@ embedded_instances {
   "  type: \"model\"\n"
   "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
   "material: \\\"/defmaterial/materials/model/spherical_enviroment_mapping_bad1/model_spherical_enviroment_mapping.material\\\"\\n"
-  "textures: \\\"/defmaterial/textures/matcap/00002.png\\\"\\n"
+  "textures: \\\"/defmaterial/textures/matcap/icy.jpg\\\"\\n"
   "skeleton: \\\"\\\"\\n"
   "animations: \\\"\\\"\\n"
   "default_animation: \\\"\\\"\\n"
@@ -1094,5 +1064,201 @@ embedded_instances {
     x: 2.0
     y: 2.0
     z: 2.0
+  }
+}
+embedded_instances {
+  id: "bevel_cube3112"
+  data: "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/defold_logo.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/matcap_ish/model_spherical_enviroment_mapping.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/matcap/00002.png\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"bevel_cube_cellshading1\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/defold.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/lit_pixel/model_lit_pixel.material\\\"\\n"
+  "textures: \\\"/example/geometry/defold.png\\\"\\n"
+  "textures: \\\"/defmaterial/textures/sphere_maps/sphere_map.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: -4.0\n"
+  "    y: 5.0\n"
+  "    z: 1.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -10.0
+    y: 0.0
+    z: -12.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+  }
+}
+embedded_instances {
+  id: "normal"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"-0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"cone\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/phong_normal/model_phong_normal.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/checker_black_white.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/normals/wrinkle-normal.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.29583648\n"
+  "    z: 0.0\n"
+  "    w: 0.9552386\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 3.0
+    y: 1.0
+    z: -16.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+    z: 2.0
+  }
+}
+embedded_instances {
+  id: "go1"
+  data: "components {\n"
+  "  id: \"spin\"\n"
+  "  component: \"/defmaterial/scripts/spin.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"rotation_axis_z\"\n"
+  "    value: \"-0.01\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"cone1\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/example/geometry/bevel_cube.dae\\\"\\n"
+  "material: \\\"/defmaterial/materials/model/phong_normal/model_phong_normal.material\\\"\\n"
+  "textures: \\\"/defmaterial/textures/martian_surface.jpg\\\"\\n"
+  "textures: \\\"/defmaterial/textures/normals/brick-normal.jpg\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"unnamed\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 3.0
+    y: 0.0
+    z: -10.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
   }
 }
